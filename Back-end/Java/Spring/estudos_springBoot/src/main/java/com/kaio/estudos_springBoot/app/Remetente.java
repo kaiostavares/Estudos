@@ -1,8 +1,12 @@
 package com.kaio.estudos_springBoot.app;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+@Component
+@Scope("prototype")
+@ConfigurationProperties(prefix = "remetente")
 public class Remetente {
     private String nome;
     private String email;
